@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1" width="100%">
+        <tr>
+            <th>Username</th>
+            <th>Password</th>
+            <th>Actions</th>
+        </tr>
+        <% if(emp.length >0){ %>
+            <% for(var i=0;i<emp.length;i++){ %>
+                <tr>
+                    <td><%- emp[i].id %></td>
+                    <td><%- emp[i].username %></td>
+                    <td><%- emp[i].password %></td>
+                    <td><a href="/delete-data?id=<%- emp[i].id %>">Delete</a></td>
+
+                </tr>
+
+            <% } %>
+
+        <% }else { %>
+            <h1>Data not found!</h1>
+        <% } %>    
+    </table>
+</body>
+</html>
