@@ -20,7 +20,7 @@ app.post('/',(req,res)=>{
     db.connect(function(error){
         if(error) throw error;
 
-        var sql = "INSERT INTO users(username , password) VALUES ?";
+        var sql = "INSERT INTO students(username , password) VALUES ?";
 
         var values = [
             [username, password]
