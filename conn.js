@@ -3,9 +3,12 @@ var mysql = require('mysql');
 var db = mysql.createConnection({  
 host: "localhost",  
 user: "root",  
-password: "",   
+password: "asdf9876",   
 database: "college"  
 });  
+
+
+// Creating database and table
 
 // db.connect(function(err) {
 //     if (err) {
